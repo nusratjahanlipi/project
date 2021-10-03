@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+
+html{
+    font-size: 10px;
+    font-family: 'montserrat',sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height:100vh;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+/*--hero section--*/
+#hero{
+    background-image:url(./image/6.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index:-1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:0 5-px ;
+    justify-content:flex-start ;
+}
+#hero h1{
+    display:block ;
+    width: fit-content;
+     font-size: 4rem;
+    position: relative;
+    color: yellowgreen;
+    animation: tex_reveal_box .5s ease forwards;
+    animation: 1s;
+}
+#hero h1:nth-child(1){
+    animation-delay: 2s;}
+
+    #hero h1:nth-child(2){
+        animation-delay: 3.5s;
+    }
+
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:0;
+    background-color:yellowgreen ;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 3.5s; 
+}
+#hero h1:nth-child(1)span{
+    animation-delay: 2s;
+}
+#hero h1:nth-child(2)span{
+    animation-delay: 3.5s;
+}
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgb(150, 220, 20);
+    background-color: transparent;
+    border: 2px solid rgb(127, 220, 20);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color,color;
+}
+#hero .cta:hover{
+    color: cyan;
+    background-color: rgb(83, 220, 20);
+}
+/*---End Hero section*/
+
+/*--servic section*/
+#services {
+}
+    #services .services{
+        flex:column;
+        text-align: center;
+        max-width:1500px;
+        margin: 0 auto;
+        padding:100px 0 ;
+    }
+    #services .section-title {
+        font-size:4rem;
+        font-weight: 300;
+        color: black;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2rem;
+        text-align: center;
+    }
+    #services .section-title spen{
+        color: blue;
+    }
+    #services .service-top p{
+        font-size: 1.4rem;
+        margin-top: 5px;
+        line-height: 2.5rem;
+        font-weight: 300;
+        letter-spacing:.05rem ;
+    }
+
+/*--End services section*/
+
+/*--keyframes*/
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width:0;
+        left: 100%;
+
+    }
+}
